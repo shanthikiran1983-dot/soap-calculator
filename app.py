@@ -16,11 +16,14 @@ with col2:
 # Create the calculate button
 if st.button("Calculate via SOAP"):
     
-    # 1. Prepare the API Call
+# 1. Prepare the API Call
     url = "http://dneonline.com/calculator.asmx"
     headers = {
         'Content-Type': 'text/xml; charset=utf-8',
-        'SOAPAction': 'http://tempuri.org/Add'
+        'SOAPAction': 'http://tempuri.org/Add',
+        # This new line tricks the firewall into thinking you are using Google Chrome on Windows
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
+    }
     }
     
     # We use f-strings to insert num1 and num2 directly into the XML
