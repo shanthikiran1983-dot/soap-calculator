@@ -24,7 +24,7 @@ if st.button("Calculate via SOAP"):
         # This new line tricks the firewall into thinking you are using Google Chrome on Windows
         'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
     }
-    }
+    
     
     # We use f-strings to insert num1 and num2 directly into the XML
     payload = f"""<?xml version="1.0" encoding="utf-8"?>
